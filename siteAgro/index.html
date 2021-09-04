@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portal do Campo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="styleHome.css">
+    <link rel="shortcut icon" href="img/favicon-32x32.png" type="image/x-icon">
+
+
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+
+</head>
+<body>
+ 
+    <header class="header">
+        <!-- Navbar-->
+    <nav class="navbar navbar-expand-lg fixed-top py-3">
+        <a class="navbar-brand text-uppercase font-weight-bold textColor" href="#">Portal do Campo</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Alterna navegação">
+        <span class="navbar-toggler-icon btn-outline-success"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a href="index.html" class="nav-link font-weight-bold">Home</a></li>                    
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle font-weight-bold" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categorias
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item font-weight-bold" href="familiar.html">Agricultura Familiar</a>
+                        <a class="dropdown-item font-weight-bold" href="nutricao_plantas.html">Nutrição de plantas</a>
+                        <a class="dropdown-item font-weight-bold" href="tecnologia.html">Agricultura de Precisão</a>
+                        <a class="dropdown-item font-weight-bold" href="irrigacao.html">Irrigação e Drenagem</a>
+                        <a class="dropdown-item font-weight-bold" href="agronegocio.html">Agronegócio</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="quem_somos.html" class="nav-link font-weight-bold">Quem Somos</a></li>
+                <li class="nav-item"><a href="contatos.html" class="nav-link font-weight-bold">Contatos</a></li>
+            </ul>
+            <form class="form-inline">
+                <input class="form-control mx-sm-5" type="search" placeholder="Pesquisar">
+                <button class="btn btn-outline-light my-2 ml-sm-0" type="submit">Pesquisar</button>
+            </form>
+        </div>
+
+        <div>
+            <div class ="header1">
+                <button onclick="diminuir()">A-</button>
+                <button onclick="aumentar()">A+</button>   
+            </div>
+        </div>
+    
+    </nav>
+</header>
+    
+<main>
+    
+    <!-- VÍDEO COM LOGO -->
+    <section>
+        <div class="wrap d-flex">
+            <div class="bg-video">
+                <span class="marca-dagua img-fluid">
+                <img class="mx-auto d-block" id="imglogo" src="img/logotransparente.png" alt="logo transparente"></span>
+                <video autoplay loop muted >
+                    <source src="img/video_campo.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </section>
+     
+    <!-- CARROSSEL DAS CATEGORIAS DO GUIA -->
+    <section class="section1">
+        <div id="carouselExampleControls" class="carousel slide carousel-fade section1" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active imgCarrossel">
+                    <img class="d-block w-100" src="img/imagem1.jpg" alt="Primeiro slide">
+                    <div class="carousel-caption d-none d-sm-block">
+                       <a href="irrigacao.html"><h1 class="legenda btn btn-dark btn-lg">Irrigação e Drenagem</h1></a>
+                    </div>
+                </div>
+            
+                <div class="carousel-item imgCarrossel">
+                    <img class="d-block w-100" src="img/imagem2.jpg" alt="Segundo slide">
+                    <div class="carousel-caption d-none d-sm-block">
+                       <a href="agronegocio.html"><h1 class="legenda btn btn-dark btn-lg">Agronegócio</h1></a>
+                    </div>
+                </div>
+
+                <div class="carousel-item imgCarrossel">
+                    <img class="d-block w-100" src="img/imagem3.jpg" alt="Terceiro slide">
+                    <div class="carousel-caption d-none d-sm-block">
+                        <a href="familiar.html"><h1 class="legenda btn btn-dark btn-lg">Agricultura Familiar</h1></a>
+                    </div>
+                </div>
+
+                <div class="carousel-item imgCarrossel">
+                    <img class="d-block w-100" src="img/imagem4.jfif" alt="Quarto slide">
+                    <div class="carousel-caption d-none d-sm-block">
+                      <a href="nutricao_plantas.html"><h1 class="legenda btn btn-dark btn-lg">Nutrição de plantas</h1></a>
+                    </div>
+                </div>
+
+                <div class="carousel-item imgCarrossel">
+                    <img class="d-block w-100" src="img/img1.jpg" alt="Quinto slide">
+                    <div class="carousel-caption d-none d-sm-block">
+                       <a href="tecnologia.html"><h1 class="legenda btn btn-dark btn-lg">Agricultura de precisão</h1></a>
+                    </div>
+                </div>
+
+
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Próximo</span>
+            </a>
+        </div>
+    </section>
+
+    <section id="quemSomos" class="d-flex flex-md-row justify-content-center align-items-center img-fluid">
+        <a href="quem_somos.html"><h1 class="legenda btn btn-dark btn-lg"  id="contatotxt">Quem Somos</h1></a>
+        <a href="contatos.html"><h1 class="legenda btn btn-dark btn-lg"  id="contatotxt">Contato</h1></a>
+    </section>
+
+    <!-- BOTÃO WPP -->
+    <div class="whatsApp">
+        <a href="https://api.whatsapp.com/send?phone=5519999999999&text=Texto%20aqui"
+        target="_blank"><img src="img/whats.png" alt="Contato pelo WhatsApp">
+        </a>
+    </div>   
+</main>
+
+<!-- Footer -->
+
+<footer class="footer-distributed">
+
+    <div class="footer-right">
+        <div class="links">
+            <a href="https://pt-br.facebook.com/"><img src="img/facebook.png" alt=""></a>
+            <a href="https://pt-br.facebook.com/"><img src="img/linkedin.png" alt=""></a>
+            <a href="https://twitter.com/twitteryoutube"><img src="img/twitter.png" alt=""></a>
+            <a href="https://www.youtube.com/"><img src="img/youtube.png" style="height: 50px;"></a>
+        </div>
+    </div>
+
+      <div class="footer-left">
+
+        <p class="footer-links">
+          <a class="link-1" href="index.html">Home</a>
+
+          <a href="quem_somos.html">Quem Somos</a>
+
+          <a href="contatos.html">Contatos</a>
+        </p>
+
+        <p>Portal do Campo &copy; 2021</p>
+      </div>
+
+      <div class="center">
+        <p>Desenvolvido por InovaDevs &#174</p>
+    </div>
+</footer>
+
+
+
+    <!-- RODAPÉ FIXO -->
+ <section class="row fixed-bottom section3">
+     <div class="col-md-3 font-weight-bolder text-center mt-3">
+         <p>Fale conosco</p>
+     </div>
+     <div class="col-md-3 text-center"> 
+        <p class="font-weight-bolder">Telefone</p>
+        <p>(011) 3256-6589</p>
+     </div>
+     <div class="col-md-3 text-center">
+        <p class="font-weight-bolder">WhatsApp</p>
+        <p>(11) 998745-5625</p>
+    </div>
+    <div class="col-md-3 text-center">
+       <p class="font-weight-bolder">E-mail</p>
+       <p>portaldocampo@pdc.org.br</p>
+    </div>
+ </section>
+ <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+  <!-- JavaScript (Opcional) -->
+  <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+</body>
+
+</html>
